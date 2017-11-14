@@ -1,0 +1,30 @@
+.input-group {
+	margin-bottom: 15px;
+}
+
+.select2-container .select2-selection--single, 
+.select2-container .select2-selection--multiple {
+	height: 34px;
+}
+
+.carousel-ultimos-cursos {
+	background-color: #E7E7E7;
+}
+
+.card-curso {
+	background-color: #FFF;
+	min-height: 160px;
+	padding: 5px;
+	text-align: center;
+}
+
+.card-curso-nome {
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+.card-curso-categoria {
+	background-color: #33A277;
+	color: #FFF;
+	margin: 20px 0;
+}
