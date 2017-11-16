@@ -8,6 +8,7 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -27,10 +28,10 @@ public class Curso {
 	@Enumerated(EnumType.STRING)
 	private Nivel nivel;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	private Categoria categoria;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.LAZY)
 	private Instrutor instrutor;
 	
 	@ManyToMany
