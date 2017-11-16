@@ -4,6 +4,16 @@
 <%@ taglib prefix="custom" tagdir="/WEB-INF/tags"%>
 
 <custom:template title="Cadastrar novo Curso">
+	<jsp:attribute name="extraStyles">
+		<link rel="stylesheet" href="<c:url value='/assets/vendor/select2/select2.css' />">
+	</jsp:attribute>
+
+	<jsp:attribute name="extraScripts">
+		<script type="text/javascript" src="<c:url value='/assets/vendor/tinymce/tinymce.min.js' />"></script>
+		<script type="text/javascript" src="<c:url value='/assets/vendor/select2/select2.js' />"></script>
+		<script type="text/javascript" src="<c:url value='/assets/js/plugins-cadastro-curso.js' />"></script>
+	</jsp:attribute>
+	
 	<jsp:body>
 		<div class="container">
 			<h1 class="text-center">Cadastrar novo Curso</h1>

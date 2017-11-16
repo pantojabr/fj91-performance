@@ -3,6 +3,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <%@ attribute name="title" required="true"%>
+<%@ attribute name="extraStyles" fragment="true" %>
+<%@ attribute name="extraScripts" fragment="true" %>
 
 <fmt:setLocale value="pt-BR" scope="session" />
 
@@ -13,10 +15,10 @@
 	<title>${title}</title>
 	
 	<link rel="stylesheet" href="<c:url value='/assets/vendor/bootstrap/css/bootstrap.css' />">
-	<link rel="stylesheet" href="<c:url value='/assets/vendor/bootstrap/css/bootstrap-theme.css' />">
-	<link rel="stylesheet" href="<c:url value='/assets/vendor/select2/select2.css' />">
-	<link rel="stylesheet" href="<c:url value='/assets/vendor/owl.carousel/assets/owl.carousel.css' />">
-	<link rel="stylesheet" href="<c:url value='/assets/vendor/owl.carousel/assets/owl.theme.default.css' />">
+
+	<!-- Puxa os outros estilos especificos da pagina -->
+	<jsp:invoke fragment="extraStyles" />
+
 	<link rel="stylesheet" href="<c:url value='/assets/css/style.css' />">
 </head>
 
@@ -27,11 +29,8 @@
 	
 	<script type="text/javascript" src="<c:url value='/assets/vendor/jquery/jquery-3.2.1.js' />"></script>
 	<script type="text/javascript" src="<c:url value='/assets/vendor/bootstrap/bootstrap.js' />"></script>
-	<script type="text/javascript" src="<c:url value='/assets/vendor/jquery.validate/jquery.validate.js' />"></script>
-	<script type="text/javascript" src="<c:url value='/assets/vendor/sweetAlert/sweetAlert.js' />"></script>
-	<script type="text/javascript" src="<c:url value='/assets/vendor/tinymce/tinymce.min.js' />"></script>
-	<script type="text/javascript" src="<c:url value='/assets/vendor/select2/select2.js' />"></script>
-	<script type="text/javascript" src="<c:url value='/assets/vendor/owl.carousel/owl.carousel.js' />"></script>
-	<script type="text/javascript" src="<c:url value='/assets/js/scripts.js' />"></script>
+
+	<!-- Puxa os scripts especificos da pagina -->
+	<jsp:invoke fragment="extraScripts" />
 </body>
 </html>

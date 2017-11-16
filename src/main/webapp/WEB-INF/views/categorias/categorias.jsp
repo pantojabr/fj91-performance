@@ -4,6 +4,11 @@
 <%@ taglib prefix="custom" tagdir="/WEB-INF/tags"%>
 
 <custom:template title="Categorias cadastradas">
+	<jsp:attribute name="extraScripts">
+		<script type="text/javascript" src="<c:url value='/assets/vendor/sweetAlert/sweetAlert.js' />"></script>
+		<script type="text/javascript" src="<c:url value='/assets/js/mensagens.js' />"></script>
+	</jsp:attribute>
+	
 	<jsp:body>
 		<div class="container">
 			<h1 class="text-center">Categorias cadastradas</h1>

@@ -3,6 +3,16 @@
 <%@ taglib prefix="custom" tagdir="/WEB-INF/tags" %>
 
 <custom:template title="Home">
+	<jsp:attribute name="extraStyles">
+		<link rel="stylesheet" href="<c:url value='/assets/vendor/owl.carousel/assets/owl.carousel.css' />">
+		<link rel="stylesheet" href="<c:url value='/assets/vendor/owl.carousel/assets/owl.theme.default.css' />">
+	</jsp:attribute>
+	
+	<jsp:attribute name="extraScripts">
+		<script type="text/javascript" src="<c:url value='/assets/vendor/owl.carousel/owl.carousel.js' />"></script>
+		<script type="text/javascript" src="<c:url value='/assets/js/carousel-cursos.js' />"></script>
+	</jsp:attribute>
+	
 	<jsp:body>
 		<img class="img-responsive" src="<c:url value='/assets/img/alura.png' />" alt="Alura">
 		
