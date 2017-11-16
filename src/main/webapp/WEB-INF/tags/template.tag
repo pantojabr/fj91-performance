@@ -15,11 +15,11 @@
 	<title>${title}</title>
 	
 	<link rel="stylesheet" href="<c:url value='/assets/vendor/bootstrap/css/bootstrap.min.css' />">
+	<link rel="stylesheet" href="<c:url value='/assets/css/style.css' />">
 
 	<!-- Puxa os outros estilos especificos da pagina -->
 	<jsp:invoke fragment="extraStyles" />
 
-	<link rel="stylesheet" href="<c:url value='/assets/css/style.css' />">
 </head>
 
 <body data-msg="${msg}">

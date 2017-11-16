@@ -11,7 +11,8 @@
 	<jsp:attribute name="extraScripts">
 		<script type="text/javascript" src="<c:url value='/assets/vendor/tinymce/tinymce.min.js' />"></script>
 		<script type="text/javascript" src="<c:url value='/assets/vendor/select2/select2.min.js' />"></script>
-		<script type="text/javascript" src="<c:url value='/assets/js/plugins-cadastro-curso.js' />"></script>
+		<script type="text/javascript" src="<c:url value='/assets/js/editor.js' />"></script>
+		<script type="text/javascript" src="<c:url value='/assets/js/combos.js' />"></script>
 	</jsp:attribute>
 	
 	<jsp:body>
