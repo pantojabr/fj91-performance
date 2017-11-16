@@ -5,12 +5,12 @@
 
 <custom:template title="Cadastrar novo Curso">
 	<jsp:attribute name="extraStyles">
-		<link rel="stylesheet" href="<c:url value='/assets/vendor/select2/select2.css' />">
+		<link rel="stylesheet" href="<c:url value='/assets/vendor/select2/select2.min.css' />">
 	</jsp:attribute>
 
 	<jsp:attribute name="extraScripts">
 		<script type="text/javascript" src="<c:url value='/assets/vendor/tinymce/tinymce.min.js' />"></script>
-		<script type="text/javascript" src="<c:url value='/assets/vendor/select2/select2.js' />"></script>
+		<script type="text/javascript" src="<c:url value='/assets/vendor/select2/select2.min.js' />"></script>
 		<script type="text/javascript" src="<c:url value='/assets/js/plugins-cadastro-curso.js' />"></script>
 	</jsp:attribute>
 	

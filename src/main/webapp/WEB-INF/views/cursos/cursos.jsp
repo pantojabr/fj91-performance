@@ -5,7 +5,7 @@
 
 <custom:template title="Cursos cadastrados">
 	<jsp:attribute name="extraScripts">
-		<script type="text/javascript" src="<c:url value='/assets/vendor/sweetAlert/sweetAlert.js' />"></script>
+		<script type="text/javascript" src="<c:url value='/assets/vendor/sweetAlert/sweetAlert.min.js' />"></script>
 		<script type="text/javascript" src="<c:url value='/assets/js/mensagens.js' />"></script>
 	</jsp:attribute>
 	

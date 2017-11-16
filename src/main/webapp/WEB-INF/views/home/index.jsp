@@ -4,12 +4,12 @@
 
 <custom:template title="Home">
 	<jsp:attribute name="extraStyles">
-		<link rel="stylesheet" href="<c:url value='/assets/vendor/owl.carousel/assets/owl.carousel.css' />">
-		<link rel="stylesheet" href="<c:url value='/assets/vendor/owl.carousel/assets/owl.theme.default.css' />">
+		<link rel="stylesheet" href="<c:url value='/assets/vendor/owl.carousel/assets/owl.carousel.min.css' />">
+		<link rel="stylesheet" href="<c:url value='/assets/vendor/owl.carousel/assets/owl.theme.default.min.css' />">
 	</jsp:attribute>
 	
 	<jsp:attribute name="extraScripts">
-		<script type="text/javascript" src="<c:url value='/assets/vendor/owl.carousel/owl.carousel.js' />"></script>
+		<script type="text/javascript" src="<c:url value='/assets/vendor/owl.carousel/owl.carousel.min.js' />"></script>
 		<script type="text/javascript" src="<c:url value='/assets/js/carousel-cursos.js' />"></script>
 	</jsp:attribute>
 	

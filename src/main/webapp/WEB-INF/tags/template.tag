@@ -14,7 +14,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<title>${title}</title>
 	
-	<link rel="stylesheet" href="<c:url value='/assets/vendor/bootstrap/css/bootstrap.css' />">
+	<link rel="stylesheet" href="<c:url value='/assets/vendor/bootstrap/css/bootstrap.min.css' />">
 
 	<!-- Puxa os outros estilos especificos da pagina -->
 	<jsp:invoke fragment="extraStyles" />
@@ -27,8 +27,8 @@
 	
 	<jsp:doBody />
 	
-	<script type="text/javascript" src="<c:url value='/assets/vendor/jquery/jquery-3.2.1.js' />"></script>
-	<script type="text/javascript" src="<c:url value='/assets/vendor/bootstrap/bootstrap.js' />"></script>
+	<script type="text/javascript" src="<c:url value='/assets/vendor/jquery/jquery-3.2.1.min.js' />"></script>
+	<script type="text/javascript" src="<c:url value='/assets/vendor/bootstrap/bootstrap.min.js' />"></script>
 
 	<!-- Puxa os scripts especificos da pagina -->
 	<jsp:invoke fragment="extraScripts" />
