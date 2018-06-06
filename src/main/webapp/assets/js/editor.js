@@ -1,4 +1,4 @@
-(function($, mce) {
+(function(mce) {
 	"use strict"
 	
 	//configs do TinyMCE
@@ -15,7 +15,4 @@
 		]
 	});
 	
-	//config do Select2 plugin
-	$("select").select2();
-	
-})(jQuery, tinymce);
+})(tinymce);
