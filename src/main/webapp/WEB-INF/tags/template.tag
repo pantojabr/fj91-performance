@@ -32,6 +32,9 @@
 	<script type="text/javascript" src="<c:url value='/assets/vendor/tinymce/tinymce.min.js' />"></script>
 	<script type="text/javascript" src="<c:url value='/assets/vendor/select2/select2.js' />"></script>
 	<script type="text/javascript" src="<c:url value='/assets/vendor/owl.carousel/owl.carousel.js' />"></script>
-	<script type="text/javascript" src="<c:url value='/assets/js/scripts.js' />"></script>
+	<script type="text/javascript" src="<c:url value='/assets/js/carousel-cursos.js' />"></script>
+	<script type="text/javascript" src="<c:url value='/assets/js/combos.js' />"></script>
+	<script type="text/javascript" src="<c:url value='/assets/js/editor.js' />"></script>
+	<script type="text/javascript" src="<c:url value='/assets/js/mensagens.js' />"></script>
 </body>
 </html>
