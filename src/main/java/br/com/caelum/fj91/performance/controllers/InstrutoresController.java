@@ -22,7 +22,7 @@ public class InstrutoresController {
 	private static final String PAGINA_CADASTRO_INSTRUTOR = "instrutores/instrutor-form";
 	private static final String REDIRECT_PAGINA_INSTRUTORES = "redirect:/instrutores";
 	
-	private static final Sort SORT_BY_NOME = new Sort("nome");
+	private static final Sort SORT_BY_NOME = Sort.by("nome");
 	
 	private final InstrutorRepository instrutorRepository;
 
@@ -52,7 +52,7 @@ public class InstrutoresController {
 	@DeleteMapping("/{id}")
 	@Transactional
 	public String remover(@PathVariable("id") Long id, RedirectAttributes redirectModel) {
-		this.instrutorRepository.delete(id);
+		this.instrutorRepository.deleteById(id);
 		redirectModel.addFlashAttribute("msg", "Instrutor removido com sucesso!");
 		return REDIRECT_PAGINA_INSTRUTORES;
 	}

@@ -22,7 +22,7 @@ public class CategoriasController {
 	private static final String PAGINA_CADASTRO_CATEGORIA = "categorias/categoria-form";
 	private static final String REDIRECT_PAGINA_CATEGORIAS = "redirect:/categorias";
 	
-	private static final Sort SORT_BY_NOME = new Sort("nome");
+	private static final Sort SORT_BY_NOME = Sort.by("nome");
 	
 	private final CategoriaRepository categoriaRepository;
 
@@ -52,7 +52,7 @@ public class CategoriasController {
 	@DeleteMapping("/{id}")
 	@Transactional
 	public String remover(@PathVariable("id") Long id, RedirectAttributes redirectModel) {
-		this.categoriaRepository.delete(id);
+		this.categoriaRepository.deleteById(id);
 		redirectModel.addFlashAttribute("msg", "Categoria removida com sucesso!");
 		return REDIRECT_PAGINA_CATEGORIAS;
 	}
