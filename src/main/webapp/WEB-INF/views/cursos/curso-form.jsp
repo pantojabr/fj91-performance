@@ -3,6 +3,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="custom" tagdir="/WEB-INF/tags"%>
 
+
 <custom:template title="Cadastrar novo Curso">
 	<jsp:attribute name="extraStyles">
 		<link rel="stylesheet" href="<c:url value='/assets/vendor/select2/select2.min.css' />">
