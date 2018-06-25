@@ -26,7 +26,7 @@ public class CursosController {
 	private static final String PAGINA_CADASTRO_CURSO = "cursos/curso-form";
 	private static final String REDIRECT_PAGINA_CURSOS = "redirect:/cursos";
 	
-	private static final Sort SORT_BY_NOME = new Sort("nome");
+	private static final Sort SORT_BY_NOME = Sort.by("nome");
 	
 	private final CursoRepository cursoRepository;
 	private final CategoriaRepository categoriaRepository;
@@ -66,7 +66,7 @@ public class CursosController {
 	@DeleteMapping("/{id}")
 	@Transactional
 	public String remover(@PathVariable("id") Long id, RedirectAttributes redirectModel) {
-		this.cursoRepository.delete(id);
+		this.cursoRepository.deleteById(id);
 		redirectModel.addFlashAttribute("msg", "Curso removido com sucesso!");
 		return REDIRECT_PAGINA_CURSOS;
 	}

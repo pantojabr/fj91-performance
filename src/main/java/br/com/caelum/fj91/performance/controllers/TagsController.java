@@ -22,7 +22,7 @@ public class TagsController {
 	private static final String PAGINA_CADASTRO_TAG = "tags/tag-form";
 	private static final String REDIRECT_PAGINA_TAGS = "redirect:/tags";
 	
-	private static final Sort SORT_BY_NOME = new Sort("nome");
+	private static final Sort SORT_BY_NOME = Sort.by("nome");
 	
 	private final TagRepository tagRepository;
 
@@ -52,7 +52,7 @@ public class TagsController {
 	@DeleteMapping("/{id}")
 	@Transactional
 	public String remover(@PathVariable("id") Long id, RedirectAttributes redirectModel) {
-		this.tagRepository.delete(id);
+		this.tagRepository.deleteById(id);
 		redirectModel.addFlashAttribute("msg", "Tag removida com sucesso!");
 		return REDIRECT_PAGINA_TAGS;
 	}
