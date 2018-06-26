@@ -1,6 +1,5 @@
 package br.com.caelum.fj91.performance.controllers;
 
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import br.com.caelum.fj91.performance.models.Categoria;
-import br.com.caelum.fj91.performance.repositories.CategoriaRepository;
+import br.com.caelum.fj91.performance.services.CategoriaService;
 
 @Controller
 @RequestMapping("/categorias")
@@ -22,17 +21,15 @@ public class CategoriasController {
 	private static final String PAGINA_CADASTRO_CATEGORIA = "categorias/categoria-form";
 	private static final String REDIRECT_PAGINA_CATEGORIAS = "redirect:/categorias";
 	
-	private static final Sort SORT_BY_NOME = Sort.by("nome");
-	
-	private final CategoriaRepository categoriaRepository;
+	private final CategoriaService categoriaService;
 
-	public CategoriasController(CategoriaRepository categoriaRepository) {
-		this.categoriaRepository = categoriaRepository;
+	public CategoriasController(CategoriaService categoriaService) {
+		this.categoriaService = categoriaService;
 	}
 
 	@GetMapping
 	public String listar(Model model) {
-		model.addAttribute("categorias", categoriaRepository.findAll(SORT_BY_NOME));
+		model.addAttribute("categorias", categoriaService.buscarTodasOrdenadasPeloNome());
 		return PAGINA_CATEGORIAS;
 	}
 	
@@ -44,7 +41,7 @@ public class CategoriasController {
 	@PostMapping
 	@Transactional
 	public String adicionar(Categoria categoria, RedirectAttributes redirectModel) {
-		this.categoriaRepository.save(categoria);
+		this.categoriaService.salvar(categoria);
 		redirectModel.addFlashAttribute("msg", "Categoria adicionada com sucesso!");
 		return REDIRECT_PAGINA_CATEGORIAS;
 	}
@@ -52,7 +49,7 @@ public class CategoriasController {
 	@DeleteMapping("/{id}")
 	@Transactional
 	public String remover(@PathVariable("id") Long id, RedirectAttributes redirectModel) {
-		this.categoriaRepository.deleteById(id);
+		this.categoriaService.excluirPorId(id);
 		redirectModel.addFlashAttribute("msg", "Categoria removida com sucesso!");
 		return REDIRECT_PAGINA_CATEGORIAS;
 	}
